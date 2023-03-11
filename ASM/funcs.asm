@@ -50,6 +50,7 @@ Encrypte    proc
 
 @@End:      pop si
 
+		xchg si, di
             call Strlen
             call Strncmp
 
