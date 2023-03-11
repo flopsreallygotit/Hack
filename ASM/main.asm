@@ -44,9 +44,6 @@ color = 3eh     ; Output color.
 ;~~~Cipher~~~
 cipher db 'dddd', 0
 
-;~~~Buffer~~~
-buffer db 20 dup(48d), 0
-
 ;~~~Messages~~~
 wrong_message db 'Access denied', 0
 right_message db 'Access approved', 0
@@ -61,7 +58,10 @@ include macro.asm
 
 org 100h
 
-Start:      xor bx, video
+Start:      jmp @@Main
+            buffer db 20 dup(48d), 0
+
+@@Main:     xor bx, video
             mov es, bx
             xor bx, bx
 
