@@ -1,0 +1,1391 @@
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 1
+main.asm
+
+
+
+      1
+      2
+      3				     ;
+      4				     ; +-------------------------------------------------------------------------+
+      5				     ; |   This	file has been generated	by The Interactive Disassembler	(IDA)	 |
+      6				     ; |	Copyright (c) 2009 by Hex-Rays,	<support@hex-rays.com>		 |
+      7				     ; |		      License info: 88-5AE3-8528-3A			 |
+      8				     ; |			      Licensed User				 |
+      9				     ; +-------------------------------------------------------------------------+
+     10				     ;
+     11				     ; Input MD5   : F9FE20BD93DE625BDCC16E11CF95586E
+     12
+     13				     ; File Name   : C:\Program	Files\DosBox\DOSBox\Doc\Vlados\MAIN.COM
+     14				     ; Format	   : MS-DOS COM-file
+     15				     ; Base Address: 1000h Range: 10100h-105A6h	Loaded length: 4A6h
+     16
+     17				     .286
+     18	0000			     .model tiny
+     19
+     20				     org 100h
+     21
+     22				     ; Attributes: noreturn
+     23
+     24				     public start
+**Error** main.asm(24) Undefined symbol: START
+     25	*000			     start proc	near
+     26	      EB FE		     jmp     short Start
+**Error** main.asm(26) Undefined symbol: START
+     27	      90		     db	90h
+**Error** main.asm(27) Code or data emission to	undeclared segment
+     28	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     29	      0E
+**Error** main.asm(28) Code or data emission to	undeclared segment
+     30	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     31	      0E
+**Error** main.asm(29) Code or data emission to	undeclared segment
+     32	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     33	      0E
+**Error** main.asm(30) Code or data emission to	undeclared segment
+     34	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     35	      0E
+**Error** main.asm(31) Code or data emission to	undeclared segment
+     36	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     37	      0E
+**Error** main.asm(32) Code or data emission to	undeclared segment
+     38	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     39	      0E
+**Error** main.asm(33) Code or data emission to	undeclared segment
+     40	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     41	      0E
+**Error** main.asm(34) Code or data emission to	undeclared segment
+     42	      0C 40 55 0E 0C 40	55+  db	0Ch, 40h, 55h, 0Eh, 0Ch, 40h, 55h, 0Eh
+     43	      0E
+**Error** main.asm(35) Code or data emission to	undeclared segment
+     44	      00		     db	0
+**Error** main.asm(36) Code or data emission to	undeclared segment
+     45
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 2
+main.asm
+
+
+
+     46	*000			     Start:
+     47	      BB B800		     mov     bx, 0B800h
+**Error** main.asm(39) Code or data emission to	undeclared segment
+     48	      8E C3		     mov     es, bx
+**Error** main.asm(40) Code or data emission to	undeclared segment
+     49				     assume es:nothing
+     50	      BB 0103		     mov     bx, 103h
+**Error** main.asm(42) Code or data emission to	undeclared segment
+     51	      E8 FFFD		     call    InputStr
+**Error** main.asm(43) Undefined symbol: INPUTSTR
+     52	      BB 0103		     mov     bx, 103h
+**Error** main.asm(44) Code or data emission to	undeclared segment
+     53	      B9 019D		     mov     cx, 19Dh
+**Error** main.asm(45) Code or data emission to	undeclared segment
+     54	      E8 FFFD		     call    Strcmp
+**Error** main.asm(46) Undefined symbol: STRCMP
+     55	      3D 0000		     cmp     ax, 0
+**Error** main.asm(47) Code or data emission to	undeclared segment
+     56	      74 FE		     jz	     short CorrectPwd
+**Error** main.asm(48) Undefined symbol: CORRECTPWD
+     57	      EB FE		     jmp     short IncorrectPwd
+**Error** main.asm(49) Undefined symbol: INCORRECTPWD
+     58				     align 2
+**Error** main.asm(50) Code or data emission to	undeclared segment
+     59
+     60	*000			     CorrectPwd:
+     61	      BA 0176		     mov     dx, 176h
+**Error** main.asm(53) Code or data emission to	undeclared segment
+     62	      E8 FFFD		     call    PrintStr
+**Error** main.asm(54) Undefined symbol: PRINTSTR
+     63	      EB FE		     jmp     short Exit
+**Error** main.asm(55) Undefined symbol: EXIT
+     64	      90		     db	90h
+**Error** main.asm(56) Code or data emission to	undeclared segment
+     65
+     66	*000			     IncorrectPwd:
+     67	      BA 018B		     mov     dx, 18Bh
+**Error** main.asm(59) Code or data emission to	undeclared segment
+     68	      E8 FFFD		     call    PrintStr
+**Error** main.asm(60) Undefined symbol: PRINTSTR
+     69
+     70	*000			     Exit:
+     71	      90		     nop
+**Error** main.asm(63) Code or data emission to	undeclared segment
+     72	      B8 4C00		     mov     ax, 4C00h
+**Error** main.asm(64) Code or data emission to	undeclared segment
+     73	      CD 21		     int     21h	     ; DOS - 2+	- QUIT WITH EXIT CODE (EXIT)
+**Error** main.asm(65) Code or data emission to	undeclared segment
+     74	*000			     start endp		     ; AL = exit code
+     75
+     76				     align 2
+**Error** main.asm(68) Code or data emission to	undeclared segment
+     77	*000  43 6F 72 72 65 63	74+  aCorrectPasswor db	'Correct Password :))$Wrong Password'
+     78	      20 50 61 73 73 77	6F+
+     79	      72 64 20 3A 29 29	24+
+     80	      57 72 6F 6E 67 20	50+
+     81	      61 73 73 77 6F 72	64
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 3
+main.asm
+
+
+
+**Error** main.asm(69) Code or data emission to	undeclared segment
+     82	      20 3A 28 24 31 32	33+  db	' :($123',0
+     83	      00
+**Error** main.asm(70) Code or data emission to	undeclared segment
+     84	      33 C0		     xor     ax, ax
+**Error** main.asm(71) Code or data emission to	undeclared segment
+     85	      51		     push    cx
+**Error** main.asm(72) Code or data emission to	undeclared segment
+     86	      56		     push    si
+**Error** main.asm(73) Code or data emission to	undeclared segment
+     87
+     88	*000			     loc_101A5:
+     89	      8B F3		     mov     si, bx
+**Error** main.asm(76) Code or data emission to	undeclared segment
+     90	      03 F0		     add     si, ax
+**Error** main.asm(77) Code or data emission to	undeclared segment
+     91	      40		     inc     ax
+**Error** main.asm(78) Code or data emission to	undeclared segment
+     92	      8B 0C		     mov     cx, [si]
+**Error** main.asm(79) Code or data emission to	undeclared segment
+     93	      80 FD 00		     cmp     ch, 0
+**Error** main.asm(80) Code or data emission to	undeclared segment
+     94	      74 FE		     jz	     short loc_101B3
+**Error** main.asm(81) Undefined symbol: LOC_101B3
+     95	      EB FE		     jmp     short loc_101A5
+**Error** main.asm(82) Undefined symbol: LOC_101A5
+     96
+     97	*000			     loc_101B3:
+     98	      5E		     pop     si
+**Error** main.asm(85) Code or data emission to	undeclared segment
+     99	      59		     pop     cx
+**Error** main.asm(86) Code or data emission to	undeclared segment
+    100	      C3		     retn
+**Error** main.asm(87) Code or data emission to	undeclared segment
+    101	      56		     push    si
+**Error** main.asm(88) Code or data emission to	undeclared segment
+    102	      33 C0		     xor     ax, ax
+**Error** main.asm(89) Code or data emission to	undeclared segment
+    103	      33 F6		     xor     si, si
+**Error** main.asm(90) Code or data emission to	undeclared segment
+    104	      83 FA 00		     cmp     dx, 0
+**Error** main.asm(91) Code or data emission to	undeclared segment
+    105	      74 FE		     jz	     short loc_101CF
+**Error** main.asm(92) Undefined symbol: LOC_101CF
+    106
+    107	*000			     loc_101C0:
+    108	      38 08		     cmp     [bx+si], cl
+**Error** main.asm(95) Code or data emission to	undeclared segment
+    109	      74 FE		     jz	     short loc_101CB
+**Error** main.asm(96) Undefined symbol: LOC_101CB
+    110	      46		     inc     si
+**Error** main.asm(97) Code or data emission to	undeclared segment
+    111	      3B F2		     cmp     si, dx
+**Error** main.asm(98) Code or data emission to	undeclared segment
+    112	      74 FE		     jz	     short loc_101CF
+**Error** main.asm(99) Undefined symbol: LOC_101CF
+    113	      EB FE		     jmp     short loc_101C0
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 4
+main.asm
+
+
+
+**Error** main.asm(100)	Undefined symbol: LOC_101C0
+    114
+    115	*000			     loc_101CB:
+    116	      8B C3		     mov     ax, bx
+**Error** main.asm(103)	Code or	data emission to undeclared segment
+    117	      03 C6		     add     ax, si
+**Error** main.asm(104)	Code or	data emission to undeclared segment
+    118
+    119	*000			     loc_101CF:
+    120	      5E		     pop     si
+**Error** main.asm(107)	Code or	data emission to undeclared segment
+    121	      C3		     retn
+**Error** main.asm(108)	Code or	data emission to undeclared segment
+    122	      56		     push    si
+**Error** main.asm(109)	Code or	data emission to undeclared segment
+    123	      33 C0		     xor     ax, ax
+**Error** main.asm(110)	Code or	data emission to undeclared segment
+    124	      33 F6		     xor     si, si
+**Error** main.asm(111)	Code or	data emission to undeclared segment
+    125
+    126	*000			     loc_101D6:
+    127	      38 08		     cmp     [bx+si], cl
+**Error** main.asm(114)	Code or	data emission to undeclared segment
+    128	      74 FE		     jz	     short loc_101E2
+**Error** main.asm(115)	Undefined symbol: LOC_101E2
+    129	      80 38 00		     cmp     byte ptr [bx+si], 0
+**Error** main.asm(116)	Code or	data emission to undeclared segment
+    130	      74 FE		     jz	     short loc_101E6
+**Error** main.asm(117)	Undefined symbol: LOC_101E6
+    131	      46		     inc     si
+**Error** main.asm(118)	Code or	data emission to undeclared segment
+    132	      EB FE		     jmp     short loc_101D6
+**Error** main.asm(119)	Undefined symbol: LOC_101D6
+    133
+    134	*000			     loc_101E2:
+    135	      8B C3		     mov     ax, bx
+**Error** main.asm(122)	Code or	data emission to undeclared segment
+    136	      03 C6		     add     ax, si
+**Error** main.asm(123)	Code or	data emission to undeclared segment
+    137
+    138	*000			     loc_101E6:
+    139	      5E		     pop     si
+**Error** main.asm(126)	Code or	data emission to undeclared segment
+    140	      C3		     retn
+**Error** main.asm(127)	Code or	data emission to undeclared segment
+    141	      56		     push    si
+**Error** main.asm(128)	Code or	data emission to undeclared segment
+    142	      33 F6		     xor     si, si
+**Error** main.asm(129)	Code or	data emission to undeclared segment
+    143	      83 FA 00		     cmp     dx, 0
+**Error** main.asm(130)	Code or	data emission to undeclared segment
+    144	      74 FE		     jz	     short loc_101F9
+**Error** main.asm(131)	Undefined symbol: LOC_101F9
+    145
+    146	*000			     loc_101F0:
+    147	      88 08		     mov     [bx+si], cl
+**Error** main.asm(134)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 5
+main.asm
+
+
+
+    148	      46		     inc     si
+**Error** main.asm(135)	Code or	data emission to undeclared segment
+    149	      3B F2		     cmp     si, dx
+**Error** main.asm(136)	Code or	data emission to undeclared segment
+    150	      74 FE		     jz	     short loc_101F9
+**Error** main.asm(137)	Undefined symbol: LOC_101F9
+    151	      EB FE		     jmp     short loc_101F0
+**Error** main.asm(138)	Undefined symbol: LOC_101F0
+    152
+    153	*000			     loc_101F9:
+    154	      5E		     pop     si
+**Error** main.asm(141)	Code or	data emission to undeclared segment
+    155	      C3		     retn
+**Error** main.asm(142)	Code or	data emission to undeclared segment
+    156
+    157
+    158
+    159	*000			     sub_101FB proc near
+    160	      56		     push    si
+**Error** main.asm(147)	Code or	data emission to undeclared segment
+    161	      55		     push    bp
+**Error** main.asm(148)	Code or	data emission to undeclared segment
+    162	      8B E9		     mov     bp, cx
+**Error** main.asm(149)	Code or	data emission to undeclared segment
+    163	      33 F6		     xor     si, si
+**Error** main.asm(150)	Code or	data emission to undeclared segment
+    164	      83 FA 00		     cmp     dx, 0
+**Error** main.asm(151)	Code or	data emission to undeclared segment
+    165	      74 FE		     jz	     short loc_10214
+**Error** main.asm(152)	Undefined symbol: LOC_10214
+    166
+    167	*000			     loc_10206:
+    168	      52		     push    dx
+**Error** main.asm(155)	Code or	data emission to undeclared segment
+    169	      26: 8A 12		     mov     dl, es:[bp+si]
+**Error** main.asm(156)	Code or	data emission to undeclared segment
+    170	      88 10		     mov     [bx+si], dl
+**Error** main.asm(157)	Code or	data emission to undeclared segment
+    171	      5A		     pop     dx
+**Error** main.asm(158)	Code or	data emission to undeclared segment
+    172	      46		     inc     si
+**Error** main.asm(159)	Code or	data emission to undeclared segment
+    173	      3B F2		     cmp     si, dx
+**Error** main.asm(160)	Code or	data emission to undeclared segment
+    174	      74 FE		     jz	     short loc_10214
+**Error** main.asm(161)	Undefined symbol: LOC_10214
+    175	      EB FE		     jmp     short loc_10206
+**Error** main.asm(162)	Undefined symbol: LOC_10206
+    176
+    177	*000			     loc_10214:
+    178	      5D		     pop     bp
+**Error** main.asm(165)	Code or	data emission to undeclared segment
+    179	      5E		     pop     si
+**Error** main.asm(166)	Code or	data emission to undeclared segment
+    180	      C3		     retn
+**Error** main.asm(167)	Code or	data emission to undeclared segment
+    181	*000			     sub_101FB endp
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 6
+main.asm
+
+
+
+    182
+    183	      52		     push    dx
+**Error** main.asm(170)	Code or	data emission to undeclared segment
+    184	      56		     push    si
+**Error** main.asm(171)	Code or	data emission to undeclared segment
+    185	      55		     push    bp
+**Error** main.asm(172)	Code or	data emission to undeclared segment
+    186	      8B E9		     mov     bp, cx
+**Error** main.asm(173)	Code or	data emission to undeclared segment
+    187	      33 F6		     xor     si, si
+**Error** main.asm(174)	Code or	data emission to undeclared segment
+    188
+    189	*000			     loc_1021E:
+    190	      8A 12		     mov     dl, [bp+si]
+**Error** main.asm(177)	Code or	data emission to undeclared segment
+    191	      88 10		     mov     [bx+si], dl
+**Error** main.asm(178)	Code or	data emission to undeclared segment
+    192	      80 3A 00		     cmp     byte ptr [bp+si], 0
+**Error** main.asm(179)	Code or	data emission to undeclared segment
+    193	      74 FE		     jz	     short loc_1022A
+**Error** main.asm(180)	Undefined symbol: LOC_1022A
+    194	      46		     inc     si
+**Error** main.asm(181)	Code or	data emission to undeclared segment
+    195	      EB FE		     jmp     short loc_1021E
+**Error** main.asm(182)	Undefined symbol: LOC_1021E
+    196
+    197	*000			     loc_1022A:
+    198	      5D		     pop     bp
+**Error** main.asm(185)	Code or	data emission to undeclared segment
+    199	      5E		     pop     si
+**Error** main.asm(186)	Code or	data emission to undeclared segment
+    200	      5A		     pop     dx
+**Error** main.asm(187)	Code or	data emission to undeclared segment
+    201	      C3		     retn
+**Error** main.asm(188)	Code or	data emission to undeclared segment
+    202	      56		     push    si
+**Error** main.asm(189)	Code or	data emission to undeclared segment
+    203	      55		     push    bp
+**Error** main.asm(190)	Code or	data emission to undeclared segment
+    204	      8B E9		     mov     bp, cx
+**Error** main.asm(191)	Code or	data emission to undeclared segment
+    205	      33 F6		     xor     si, si
+**Error** main.asm(192)	Code or	data emission to undeclared segment
+    206	      83 FA 00		     cmp     dx, 0
+**Error** main.asm(193)	Code or	data emission to undeclared segment
+    207	      74 FE		     jz	     short loc_10251
+**Error** main.asm(194)	Undefined symbol: LOC_10251
+    208
+    209	*000			     loc_10239:
+    210	      33 C0		     xor     ax, ax
+**Error** main.asm(197)	Code or	data emission to undeclared segment
+    211	      8A 00		     mov     al, [bx+si]
+**Error** main.asm(198)	Code or	data emission to undeclared segment
+    212	      52		     push    dx
+**Error** main.asm(199)	Code or	data emission to undeclared segment
+    213	      33 D2		     xor     dx, dx
+**Error** main.asm(200)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 7
+main.asm
+
+
+
+    214	      8A 12		     mov     dl, [bp+si]
+**Error** main.asm(201)	Code or	data emission to undeclared segment
+    215	      2B C2		     sub     ax, dx
+**Error** main.asm(202)	Code or	data emission to undeclared segment
+    216	      5A		     pop     dx
+**Error** main.asm(203)	Code or	data emission to undeclared segment
+    217	      3D 0000		     cmp     ax, 0
+**Error** main.asm(204)	Code or	data emission to undeclared segment
+    218	      75 FE		     jnz     short loc_10251
+**Error** main.asm(205)	Undefined symbol: LOC_10251
+    219	      46		     inc     si
+**Error** main.asm(206)	Code or	data emission to undeclared segment
+    220	      3B F2		     cmp     si, dx
+**Error** main.asm(207)	Code or	data emission to undeclared segment
+    221	      74 FE		     jz	     short loc_10251
+**Error** main.asm(208)	Undefined symbol: LOC_10251
+    222	      EB FE		     jmp     short loc_10239
+**Error** main.asm(209)	Undefined symbol: LOC_10239
+    223
+    224	*000			     loc_10251:
+    225	      5D		     pop     bp
+**Error** main.asm(212)	Code or	data emission to undeclared segment
+    226	      5E		     pop     si
+**Error** main.asm(213)	Code or	data emission to undeclared segment
+    227	      C3		     retn
+**Error** main.asm(214)	Code or	data emission to undeclared segment
+    228
+    229
+    230
+    231	*000			     Strcmp proc near
+    232	      56		     push    si
+**Error** main.asm(219)	Code or	data emission to undeclared segment
+    233	      55		     push    bp
+**Error** main.asm(220)	Code or	data emission to undeclared segment
+    234	      8B E9		     mov     bp, cx
+**Error** main.asm(221)	Code or	data emission to undeclared segment
+    235	      33 F6		     xor     si, si
+**Error** main.asm(222)	Code or	data emission to undeclared segment
+    236
+    237	*000			     loc_1025A:
+    238	      33 C0		     xor     ax, ax
+**Error** main.asm(225)	Code or	data emission to undeclared segment
+    239	      8A 00		     mov     al, [bx+si]
+**Error** main.asm(226)	Code or	data emission to undeclared segment
+    240	      52		     push    dx
+**Error** main.asm(227)	Code or	data emission to undeclared segment
+    241	      33 D2		     xor     dx, dx
+**Error** main.asm(228)	Code or	data emission to undeclared segment
+    242	      8A 12		     mov     dl, [bp+si]
+**Error** main.asm(229)	Code or	data emission to undeclared segment
+    243	      2B C2		     sub     ax, dx
+**Error** main.asm(230)	Code or	data emission to undeclared segment
+    244	      5A		     pop     dx
+**Error** main.asm(231)	Code or	data emission to undeclared segment
+    245	      3D 0000		     cmp     ax, 0
+**Error** main.asm(232)	Code or	data emission to undeclared segment
+    246	      75 FE		     jnz     short loc_10273
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 8
+main.asm
+
+
+
+**Error** main.asm(233)	Undefined symbol: LOC_10273
+    247	      80 38 00		     cmp     byte ptr [bx+si], 0
+**Error** main.asm(234)	Code or	data emission to undeclared segment
+    248	      74 FE		     jz	     short loc_10273
+**Error** main.asm(235)	Undefined symbol: LOC_10273
+    249	      46		     inc     si
+**Error** main.asm(236)	Code or	data emission to undeclared segment
+    250	      EB FE		     jmp     short loc_1025A
+**Error** main.asm(237)	Undefined symbol: LOC_1025A
+    251
+    252	*000			     loc_10273:
+    253	      5D		     pop     bp
+**Error** main.asm(240)	Code or	data emission to undeclared segment
+    254	      5E		     pop     si
+**Error** main.asm(241)	Code or	data emission to undeclared segment
+    255	      C3		     retn
+**Error** main.asm(242)	Code or	data emission to undeclared segment
+    256	*000			     Strcmp endp
+    257
+    258	      33 C0		     xor     ax, ax
+**Error** main.asm(245)	Code or	data emission to undeclared segment
+    259	      52		     push    dx
+**Error** main.asm(246)	Code or	data emission to undeclared segment
+    260	      56		     push    si
+**Error** main.asm(247)	Code or	data emission to undeclared segment
+    261	      33 D2		     xor     dx, dx
+**Error** main.asm(248)	Code or	data emission to undeclared segment
+    262
+    263	*000			     loc_1027C:
+    264	      8B F3		     mov     si, bx
+**Error** main.asm(251)	Code or	data emission to undeclared segment
+    265	      03 F1		     add     si, cx
+**Error** main.asm(252)	Code or	data emission to undeclared segment
+    266	      2B F2		     sub     si, dx
+**Error** main.asm(253)	Code or	data emission to undeclared segment
+    267	      83 EE 01		     sub     si, 1
+**Error** main.asm(254)	Code or	data emission to undeclared segment
+    268	      51		     push    cx
+**Error** main.asm(255)	Code or	data emission to undeclared segment
+    269	      50		     push    ax
+**Error** main.asm(256)	Code or	data emission to undeclared segment
+    270	      33 C0		     xor     ax, ax
+**Error** main.asm(257)	Code or	data emission to undeclared segment
+    271	      8A 04		     mov     al, [si]
+**Error** main.asm(258)	Code or	data emission to undeclared segment
+    272	      2C 30		     sub     al, 30h
+**Error** main.asm(259)	Code or	data emission to undeclared segment
+    273	      52		     push    dx
+**Error** main.asm(260)	Code or	data emission to undeclared segment
+    274	      8B CA		     mov     cx, dx
+**Error** main.asm(261)	Code or	data emission to undeclared segment
+    275	      BE 000A		     mov     si, 0Ah
+**Error** main.asm(262)	Code or	data emission to undeclared segment
+    276	      E3 FE		     jcxz    short loc_1029D
+**Error** main.asm(263)	Undefined symbol: LOC_1029D
+    277
+    278	*000			     loc_10295:
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 9
+main.asm
+
+
+
+    279	      F7 E6		     mul     si
+**Error** main.asm(266)	Code or	data emission to undeclared segment
+    280	      49		     dec     cx
+**Error** main.asm(267)	Code or	data emission to undeclared segment
+    281	      83 F9 00		     cmp     cx, 0
+**Error** main.asm(268)	Code or	data emission to undeclared segment
+    282	      75 FE		     jnz     short loc_10295
+**Error** main.asm(269)	Undefined symbol: LOC_10295
+    283
+    284	*000			     loc_1029D:
+    285	      5A		     pop     dx
+**Error** main.asm(272)	Code or	data emission to undeclared segment
+    286	      8B C8		     mov     cx, ax
+**Error** main.asm(273)	Code or	data emission to undeclared segment
+    287	      58		     pop     ax
+**Error** main.asm(274)	Code or	data emission to undeclared segment
+    288	      03 C1		     add     ax, cx
+**Error** main.asm(275)	Code or	data emission to undeclared segment
+    289	      59		     pop     cx
+**Error** main.asm(276)	Code or	data emission to undeclared segment
+    290	      42		     inc     dx
+**Error** main.asm(277)	Code or	data emission to undeclared segment
+    291	      3B D1		     cmp     dx, cx
+**Error** main.asm(278)	Code or	data emission to undeclared segment
+    292	      75 FE		     jnz     short loc_1027C
+**Error** main.asm(279)	Undefined symbol: LOC_1027C
+    293	      5E		     pop     si
+**Error** main.asm(280)	Code or	data emission to undeclared segment
+    294	      5A		     pop     dx
+**Error** main.asm(281)	Code or	data emission to undeclared segment
+    295	      C3		     retn
+**Error** main.asm(282)	Code or	data emission to undeclared segment
+    296
+    297
+    298
+    299	*000			     sub_102AC proc near
+    300	      53		     push    bx
+**Error** main.asm(287)	Code or	data emission to undeclared segment
+    301	      51		     push    cx
+**Error** main.asm(288)	Code or	data emission to undeclared segment
+    302	      52		     push    dx
+**Error** main.asm(289)	Code or	data emission to undeclared segment
+    303	      50		     push    ax
+**Error** main.asm(290)	Code or	data emission to undeclared segment
+    304	      E8 FFFD		     call    sub_102E8
+**Error** main.asm(291)	Undefined symbol: SUB_102E8
+    305	      8B D8		     mov     bx, ax
+**Error** main.asm(292)	Code or	data emission to undeclared segment
+    306	      58		     pop     ax
+**Error** main.asm(293)	Code or	data emission to undeclared segment
+    307
+    308	*000			     loc_102B6:
+    309	      8A F5		     mov     dh, ch
+**Error** main.asm(296)	Code or	data emission to undeclared segment
+    310	      53		     push    bx
+**Error** main.asm(297)	Code or	data emission to undeclared segment
+    311
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 10
+main.asm
+
+
+
+    312	*000			     loc_102B9:
+    313	      26: 89 07		     mov     es:[bx], ax
+**Error** main.asm(300)	Code or	data emission to undeclared segment
+    314	      83 C3 02		     add     bx, 2
+**Error** main.asm(301)	Code or	data emission to undeclared segment
+    315	      FE CE		     dec     dh
+**Error** main.asm(302)	Code or	data emission to undeclared segment
+    316	      80 FE 00		     cmp     dh, 0
+**Error** main.asm(303)	Code or	data emission to undeclared segment
+    317	      74 FE		     jz	     short loc_102C8
+**Error** main.asm(304)	Undefined symbol: LOC_102C8
+    318	      EB FE		     jmp     short loc_102B9
+**Error** main.asm(305)	Undefined symbol: LOC_102B9
+    319
+    320	*000			     loc_102C8:
+    321	      5B		     pop     bx
+**Error** main.asm(308)	Code or	data emission to undeclared segment
+    322	      81 C3 00A0	     add     bx, 0A0h
+**Error** main.asm(309)	Code or	data emission to undeclared segment
+    323	      FE C9		     dec     cl
+**Error** main.asm(310)	Code or	data emission to undeclared segment
+    324	      80 F9 00		     cmp     cl, 0
+**Error** main.asm(311)	Code or	data emission to undeclared segment
+    325	      74 FE		     jz	     short loc_102D6
+**Error** main.asm(312)	Undefined symbol: LOC_102D6
+    326	      EB FE		     jmp     short loc_102B6
+**Error** main.asm(313)	Undefined symbol: LOC_102B6
+    327
+    328	*000			     loc_102D6:
+    329	      5A		     pop     dx
+**Error** main.asm(316)	Code or	data emission to undeclared segment
+    330	      59		     pop     cx
+**Error** main.asm(317)	Code or	data emission to undeclared segment
+    331	      5B		     pop     bx
+**Error** main.asm(318)	Code or	data emission to undeclared segment
+    332	      C3		     retn
+**Error** main.asm(319)	Code or	data emission to undeclared segment
+    333	*000			     sub_102AC endp
+    334
+    335	      53		     push    bx
+**Error** main.asm(322)	Code or	data emission to undeclared segment
+    336	      51		     push    cx
+**Error** main.asm(323)	Code or	data emission to undeclared segment
+    337	      33 DB		     xor     bx, bx
+**Error** main.asm(324)	Code or	data emission to undeclared segment
+    338	      B5 50		     mov     ch, 50h
+**Error** main.asm(325)	Code or	data emission to undeclared segment
+    339	      B1 19		     mov     cl, 19h
+**Error** main.asm(326)	Code or	data emission to undeclared segment
+    340	      E8 FFFD		     call    sub_102AC
+**Error** main.asm(327)	Undefined symbol: SUB_102AC
+    341	      59		     pop     cx
+**Error** main.asm(328)	Code or	data emission to undeclared segment
+    342	      5B		     pop     bx
+**Error** main.asm(329)	Code or	data emission to undeclared segment
+    343	      C3		     retn
+**Error** main.asm(330)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 11
+main.asm
+
+
+
+    344
+    345
+    346
+    347	*000			     sub_102E8 proc near
+    348	      D0 E7		     shl     bh, 1
+**Error** main.asm(335)	Code or	data emission to undeclared segment
+    349	      52		     push    dx
+**Error** main.asm(336)	Code or	data emission to undeclared segment
+    350	      B0 A0		     mov     al, 0A0h
+**Error** main.asm(337)	Code or	data emission to undeclared segment
+    351	      F6 E3		     mul     bl
+**Error** main.asm(338)	Code or	data emission to undeclared segment
+    352	      BA 0000		     mov     dx, 0
+**Error** main.asm(339)	Code or	data emission to undeclared segment
+    353	      02 D7		     add     dl, bh
+**Error** main.asm(340)	Code or	data emission to undeclared segment
+    354	      03 C2		     add     ax, dx
+**Error** main.asm(341)	Code or	data emission to undeclared segment
+    355	      5A		     pop     dx
+**Error** main.asm(342)	Code or	data emission to undeclared segment
+    356	      D0 EF		     shr     bh, 1
+**Error** main.asm(343)	Code or	data emission to undeclared segment
+    357	      C3		     retn
+**Error** main.asm(344)	Code or	data emission to undeclared segment
+    358	*000			     sub_102E8 endp
+    359
+    360
+    361
+    362
+    363	*000			     sub_102FA proc near
+    364	      57		     push    di
+**Error** main.asm(351)	Code or	data emission to undeclared segment
+    365	      50		     push    ax
+**Error** main.asm(352)	Code or	data emission to undeclared segment
+    366	      E8 FFFD		     call    sub_102E8
+**Error** main.asm(353)	Undefined symbol: SUB_102E8
+    367	      8B F8		     mov     di, ax
+**Error** main.asm(354)	Code or	data emission to undeclared segment
+    368	      58		     pop     ax
+**Error** main.asm(355)	Code or	data emission to undeclared segment
+    369	      AB		     stosw
+**Error** main.asm(356)	Code or	data emission to undeclared segment
+    370	      5F		     pop     di
+**Error** main.asm(357)	Code or	data emission to undeclared segment
+    371	      C3		     retn
+**Error** main.asm(358)	Code or	data emission to undeclared segment
+    372	*000			     sub_102FA endp
+    373
+    374	      50		     push    ax
+**Error** main.asm(361)	Code or	data emission to undeclared segment
+    375	      53		     push    bx
+**Error** main.asm(362)	Code or	data emission to undeclared segment
+    376	      52		     push    dx
+**Error** main.asm(363)	Code or	data emission to undeclared segment
+    377	      56		     push    si
+**Error** main.asm(364)	Code or	data emission to undeclared segment
+    378	      8B F1		     mov     si, cx
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 12
+main.asm
+
+
+
+**Error** main.asm(365)	Code or	data emission to undeclared segment
+    379
+    380	*000			     loc_1030B:
+    381	      8A 14		     mov     dl, [si]
+**Error** main.asm(368)	Code or	data emission to undeclared segment
+    382	      80 FA 00		     cmp     dl, 0
+**Error** main.asm(369)	Code or	data emission to undeclared segment
+    383	      74 FE		     jz	     short loc_10326
+**Error** main.asm(370)	Undefined symbol: LOC_10326
+    384	      80 FA 0D		     cmp     dl, 0Dh
+**Error** main.asm(371)	Code or	data emission to undeclared segment
+    385	      74 FE		     jz	     short loc_10326
+**Error** main.asm(372)	Undefined symbol: LOC_10326
+    386	      80 FA 24		     cmp     dl, 24h
+**Error** main.asm(373)	Code or	data emission to undeclared segment
+    387	      74 FE		     jz	     short loc_10326
+**Error** main.asm(374)	Undefined symbol: LOC_10326
+    388	      8A 04		     mov     al, [si]
+**Error** main.asm(375)	Code or	data emission to undeclared segment
+    389	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(376)	Undefined symbol: SUB_102FA
+    390	      FE C7		     inc     bh
+**Error** main.asm(377)	Code or	data emission to undeclared segment
+    391	      46		     inc     si
+**Error** main.asm(378)	Code or	data emission to undeclared segment
+    392	      E2 FE		     loop    loc_1030B
+**Error** main.asm(379)	Undefined symbol: LOC_1030B
+    393
+    394	*000			     loc_10326:
+    395	      5E		     pop     si
+**Error** main.asm(382)	Code or	data emission to undeclared segment
+    396	      5A		     pop     dx
+**Error** main.asm(383)	Code or	data emission to undeclared segment
+    397	      58		     pop     ax
+**Error** main.asm(384)	Code or	data emission to undeclared segment
+    398	      5B		     pop     bx
+**Error** main.asm(385)	Code or	data emission to undeclared segment
+    399	      C3		     retn
+**Error** main.asm(386)	Code or	data emission to undeclared segment
+    400	      80 FD 01		     cmp     ch, 1
+**Error** main.asm(387)	Code or	data emission to undeclared segment
+    401	      76 FE		     jbe     short locret_10367
+**Error** main.asm(388)	Undefined symbol: LOCRET_10367
+    402	      53		     push    bx
+**Error** main.asm(389)	Code or	data emission to undeclared segment
+    403	      52		     push    dx
+**Error** main.asm(390)	Code or	data emission to undeclared segment
+    404	      50		     push    ax
+**Error** main.asm(391)	Code or	data emission to undeclared segment
+    405	      8A C6		     mov     al, dh
+**Error** main.asm(392)	Code or	data emission to undeclared segment
+    406	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(393)	Undefined symbol: SUB_102FA
+    407	      58		     pop     ax
+**Error** main.asm(394)	Code or	data emission to undeclared segment
+    408	      50		     push    ax
+**Error** main.asm(395)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 13
+main.asm
+
+
+
+    409	      53		     push    bx
+**Error** main.asm(396)	Code or	data emission to undeclared segment
+    410	      02 FD		     add     bh, ch
+**Error** main.asm(397)	Code or	data emission to undeclared segment
+    411	      80 EF 01		     sub     bh, 1
+**Error** main.asm(398)	Code or	data emission to undeclared segment
+    412	      8A C2		     mov     al, dl
+**Error** main.asm(399)	Code or	data emission to undeclared segment
+    413	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(400)	Undefined symbol: SUB_102FA
+    414	      5B		     pop     bx
+**Error** main.asm(401)	Code or	data emission to undeclared segment
+    415	      58		     pop     ax
+**Error** main.asm(402)	Code or	data emission to undeclared segment
+    416	      53		     push    bx
+**Error** main.asm(403)	Code or	data emission to undeclared segment
+    417	      51		     push    cx
+**Error** main.asm(404)	Code or	data emission to undeclared segment
+    418	      80 C7 01		     add     bh, 1
+**Error** main.asm(405)	Code or	data emission to undeclared segment
+    419	      80 ED 02		     sub     ch, 2
+**Error** main.asm(406)	Code or	data emission to undeclared segment
+    420	      80 FD 00		     cmp     ch, 0
+**Error** main.asm(407)	Code or	data emission to undeclared segment
+    421	      74 FE		     jz	     short loc_10363
+**Error** main.asm(408)	Undefined symbol: LOC_10363
+    422	      33 D2		     xor     dx, dx
+**Error** main.asm(409)	Code or	data emission to undeclared segment
+    423
+    424	*000			     loc_10356:
+    425	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(412)	Undefined symbol: SUB_102FA
+    426	      FE C7		     inc     bh
+**Error** main.asm(413)	Code or	data emission to undeclared segment
+    427	      FE C6		     inc     dh
+**Error** main.asm(414)	Code or	data emission to undeclared segment
+    428	      3A F5		     cmp     dh, ch
+**Error** main.asm(415)	Code or	data emission to undeclared segment
+    429	      74 FE		     jz	     short loc_10363
+**Error** main.asm(416)	Undefined symbol: LOC_10363
+    430	      EB FE		     jmp     short loc_10356
+**Error** main.asm(417)	Undefined symbol: LOC_10356
+    431
+    432	*000			     loc_10363:
+    433	      59		     pop     cx
+**Error** main.asm(420)	Code or	data emission to undeclared segment
+    434	      5B		     pop     bx
+**Error** main.asm(421)	Code or	data emission to undeclared segment
+    435	      5A		     pop     dx
+**Error** main.asm(422)	Code or	data emission to undeclared segment
+    436	      5B		     pop     bx
+**Error** main.asm(423)	Code or	data emission to undeclared segment
+    437
+    438	*000			     locret_10367:
+    439	      C3		     retn
+**Error** main.asm(426)	Code or	data emission to undeclared segment
+    440	      80 F9 01		     cmp     cl, 1
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 14
+main.asm
+
+
+
+**Error** main.asm(427)	Code or	data emission to undeclared segment
+    441	      76 FE		     jbe     short locret_103A4
+**Error** main.asm(428)	Undefined symbol: LOCRET_103A4
+    442	      53		     push    bx
+**Error** main.asm(429)	Code or	data emission to undeclared segment
+    443	      52		     push    dx
+**Error** main.asm(430)	Code or	data emission to undeclared segment
+    444	      50		     push    ax
+**Error** main.asm(431)	Code or	data emission to undeclared segment
+    445	      8A C6		     mov     al, dh
+**Error** main.asm(432)	Code or	data emission to undeclared segment
+    446	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(433)	Undefined symbol: SUB_102FA
+    447	      58		     pop     ax
+**Error** main.asm(434)	Code or	data emission to undeclared segment
+    448	      50		     push    ax
+**Error** main.asm(435)	Code or	data emission to undeclared segment
+    449	      53		     push    bx
+**Error** main.asm(436)	Code or	data emission to undeclared segment
+    450	      02 D9		     add     bl, cl
+**Error** main.asm(437)	Code or	data emission to undeclared segment
+    451	      80 EB 01		     sub     bl, 1
+**Error** main.asm(438)	Code or	data emission to undeclared segment
+    452	      8A C2		     mov     al, dl
+**Error** main.asm(439)	Code or	data emission to undeclared segment
+    453	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(440)	Undefined symbol: SUB_102FA
+    454	      5B		     pop     bx
+**Error** main.asm(441)	Code or	data emission to undeclared segment
+    455	      58		     pop     ax
+**Error** main.asm(442)	Code or	data emission to undeclared segment
+    456	      53		     push    bx
+**Error** main.asm(443)	Code or	data emission to undeclared segment
+    457	      51		     push    cx
+**Error** main.asm(444)	Code or	data emission to undeclared segment
+    458	      80 C3 01		     add     bl, 1
+**Error** main.asm(445)	Code or	data emission to undeclared segment
+    459	      80 E9 02		     sub     cl, 2
+**Error** main.asm(446)	Code or	data emission to undeclared segment
+    460	      80 F9 00		     cmp     cl, 0
+**Error** main.asm(447)	Code or	data emission to undeclared segment
+    461	      74 FE		     jz	     short loc_103A0
+**Error** main.asm(448)	Undefined symbol: LOC_103A0
+    462	      33 D2		     xor     dx, dx
+**Error** main.asm(449)	Code or	data emission to undeclared segment
+    463
+    464	*000			     loc_10393:
+    465	      E8 FFFD		     call    sub_102FA
+**Error** main.asm(452)	Undefined symbol: SUB_102FA
+    466	      FE C3		     inc     bl
+**Error** main.asm(453)	Code or	data emission to undeclared segment
+    467	      FE C2		     inc     dl
+**Error** main.asm(454)	Code or	data emission to undeclared segment
+    468	      3A D1		     cmp     dl, cl
+**Error** main.asm(455)	Code or	data emission to undeclared segment
+    469	      74 FE		     jz	     short loc_103A0
+**Error** main.asm(456)	Undefined symbol: LOC_103A0
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 15
+main.asm
+
+
+
+    470	      EB FE		     jmp     short loc_10393
+**Error** main.asm(457)	Undefined symbol: LOC_10393
+    471
+    472	*000			     loc_103A0:
+    473	      59		     pop     cx
+**Error** main.asm(460)	Code or	data emission to undeclared segment
+    474	      5B		     pop     bx
+**Error** main.asm(461)	Code or	data emission to undeclared segment
+    475	      5A		     pop     dx
+**Error** main.asm(462)	Code or	data emission to undeclared segment
+    476	      5B		     pop     bx
+**Error** main.asm(463)	Code or	data emission to undeclared segment
+    477
+    478	*000			     locret_103A4:
+    479	      C3		     retn
+**Error** main.asm(466)	Code or	data emission to undeclared segment
+    480	      00 C9 C8 BB BC BA	     db	9 dup(0), 0C9h,	0C8h, 0BBh, 0BCh, 2 dup(0BAh)
+**Error** main.asm(467)	Code or	data emission to undeclared segment
+    481	      CD 00 03 2D BC BB	     db	2 dup(0CDh), 0,	8 dup(3), 2Dh, 0BCh, 0BBh
+**Error** main.asm(468)	Code or	data emission to undeclared segment
+    482	      C8 C9 CD BA	     db	0C8h, 0C9h, 2 dup(0CDh), 2 dup(0BAh)
+**Error** main.asm(469)	Code or	data emission to undeclared segment
+    483	      00 DA C0 BF D9 B3	     db	0, 0DAh, 0C0h, 0BFh, 0D9h, 2 dup(0B3h)
+**Error** main.asm(470)	Code or	data emission to undeclared segment
+    484	      C4 00 50 53 51 52	56   db	2 dup(0C4h), 0,	50h, 53h, 51h, 52h, 56h
+**Error** main.asm(471)	Code or	data emission to undeclared segment
+    485	      57 50 8B F3 33 C0	     db	2 dup(57h), 50h, 8Bh, 0F3h, 33h, 0C0h
+**Error** main.asm(472)	Code or	data emission to undeclared segment
+    486	      8A 47 05 B9 09 00	F7+  db	8Ah, 47h, 5, 0B9h, 9, 0, 0F7h, 0E1h, 8Bh
+    487	      E1 8B
+**Error** main.asm(473)	Code or	data emission to undeclared segment
+    488	      F8 81 C7 A5 03 8A	67+  db	0F8h, 81h, 0C7h, 0A5h, 3, 8Ah, 67h, 4
+    489	      04
+**Error** main.asm(474)	Code or	data emission to undeclared segment
+    490	      8A 6F 02 8A 4F 03	8A+  db	8Ah, 6Fh, 2, 8Ah, 4Fh, 3, 8Ah, 3Ch, 8Ah
+    491	      3C 8A
+**Error** main.asm(475)	Code or	data emission to undeclared segment
+    492	      5C 01 8A 45 06 8A	35+  db	5Ch, 1,	8Ah, 45h, 6, 8Ah, 35h, 8Ah, 55h
+    493	      8A 55
+**Error** main.asm(476)	Code or	data emission to undeclared segment
+    494	      02 E8 26 FF 8A 3C	8A+  db	2, 0E8h, 26h, 0FFh, 8Ah, 3Ch, 8Ah, 5Ch
+    495	      5C
+**Error** main.asm(477)	Code or	data emission to undeclared segment
+    496	      01 8A 45 04 8A 35	8A+  db	1, 8Ah,	45h, 4,	8Ah, 35h, 8Ah, 55h, 1
+    497	      55 01
+**Error** main.asm(478)	Code or	data emission to undeclared segment
+    498	      E8 53 FF 53 8A 3C	8A+  db	0E8h, 53h, 0FFh, 53h, 8Ah, 3Ch,	8Ah, 54h
+    499	      54
+**Error** main.asm(479)	Code or	data emission to undeclared segment
+    500	      01 02 D1 80 EA 01	8A+  db	1, 2, 0D1h, 80h, 0EAh, 1, 8Ah, 0DAh, 8Ah
+    501	      DA 8A
+**Error** main.asm(480)	Code or	data emission to undeclared segment
+    502	      45 07 8A 75 01 8A	55+  db	45h, 7,	8Ah, 75h, 1, 8Ah, 55h, 3, 0E8h
+    503	      03 E8
+**Error** main.asm(481)	Code or	data emission to undeclared segment
+    504	      FD FE 8A 14 02 D5	80+  db	0FDh, 0FEh, 8Ah, 14h, 2, 0D5h, 80h, 0EAh
+    505	      EA
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 16
+main.asm
+
+
+
+**Error** main.asm(482)	Code or	data emission to undeclared segment
+    506	      01 8A FA 8A 5C 01	8A+  db	1, 8Ah,	0FAh, 8Ah, 5Ch,	1, 8Ah,	45h, 5
+    507	      45 05
+**Error** main.asm(483)	Code or	data emission to undeclared segment
+    508	      8A 75 02 8A 55 03	E8+  db	8Ah, 75h, 2, 8Ah, 55h, 3, 0E8h,	22h, 0FFh
+    509	      22 FF
+**Error** main.asm(484)	Code or	data emission to undeclared segment
+    510	      53 51 8A 3C 80 C7	01+  db	53h, 51h, 8Ah, 3Ch, 80h, 0C7h, 1, 8Ah
+    511	      8A
+**Error** main.asm(485)	Code or	data emission to undeclared segment
+    512	      5C 01 80 C3 01 8A	45+  db	5Ch, 1,	80h, 0C3h, 1, 8Ah, 45h,	8, 80h
+    513	      08 80
+**Error** main.asm(486)	Code or	data emission to undeclared segment
+    514	      ED 02 80 E9 02 E8	4D+  db	0EDh, 2, 80h, 0E9h, 2, 0E8h, 4Dh, 0FEh
+    515	      FE
+**Error** main.asm(487)	Code or	data emission to undeclared segment
+    516	      59 5B 58 8B C8 8B	     db	59h, 2 dup(5Bh), 58h, 8Bh, 0C8h, 8Bh
+**Error** main.asm(488)	Code or	data emission to undeclared segment
+    517	      D8 E8 37 FD F7 D8	33   db	0D8h, 0E8h, 37h, 0FDh, 0F7h, 0D8h, 33h
+**Error** main.asm(489)	Code or	data emission to undeclared segment
+    518	      D2 8A 54 02 03 C2	33+  db	0D2h, 8Ah, 54h,	2, 3, 0C2h, 33h, 0D2h
+    519	      D2
+**Error** main.asm(490)	Code or	data emission to undeclared segment
+    520	      BF 02 00 F7 8A 3C	02   db	0BFh, 2, 0, 2 dup(0F7h), 8Ah, 3Ch, 2
+**Error** main.asm(491)	Code or	data emission to undeclared segment
+    521	      F8 33 C0 8A 44 03	33+  db	0F8h, 33h, 0C0h, 8Ah, 44h, 3, 33h, 0D2h
+    522	      D2
+**Error** main.asm(492)	Code or	data emission to undeclared segment
+    523	      BF 02 00 F7 8A 5C	01   db	0BFh, 2, 0, 2 dup(0F7h), 8Ah, 5Ch, 1
+**Error** main.asm(493)	Code or	data emission to undeclared segment
+    524	      02 D8 8A 64 04 E8	70+  db	2, 0D8h, 8Ah, 64h, 4, 0E8h, 70h, 0FEh
+    525	      FE
+**Error** main.asm(494)	Code or	data emission to undeclared segment
+    526	      5F 5E 5A 59 5B 58	C3   db	2 dup(5Fh), 5Eh, 5Ah, 59h, 5Bh,	58h, 0C3h
+**Error** main.asm(495)	Code or	data emission to undeclared segment
+    527	      00 53 51 52 8B CB	     db	15h dup(0), 53h, 51h, 52h, 8Bh,	0CBh
+**Error** main.asm(496)	Code or	data emission to undeclared segment
+    528	      BB 9E 04 BA 14 00	E8+  db	0BBh, 9Eh, 4, 0BAh, 14h, 0, 0E8h, 3Bh
+    529	      3B
+**Error** main.asm(497)	Code or	data emission to undeclared segment
+    530	      FD 33 C9 8A 36 A0	04+  db	0FDh, 33h, 0C9h, 8Ah, 36h, 0A0h, 4, 8Ah
+    531	      8A
+**Error** main.asm(498)	Code or	data emission to undeclared segment
+    532	      16 A1 04 C6 06 A0	04+  db	16h, 0A1h, 4, 0C6h, 6, 0A0h, 4,	3, 0C6h
+    533	      03 C6
+**Error** main.asm(499)	Code or	data emission to undeclared segment
+    534	      06 A1 04 03 50 B8	9D+  db	6, 0A1h, 4, 3, 50h, 0B8h, 9Dh, 4, 0E8h
+    535	      04 E8
+**Error** main.asm(500)	Code or	data emission to undeclared segment
+    536	      F7 FE 38 36 A0 04	74+  db	0F7h, 0FEh, 38h, 36h, 0A0h, 4, 74h, 4
+    537	      04
+**Error** main.asm(501)	Code or	data emission to undeclared segment
+    538	      FE 06 A0 04 38 16	A1+  db	0FEh, 6, 0A0h, 4, 38h, 16h, 0A1h, 4, 74h
+    539	      04 74
+**Error** main.asm(502)	Code or	data emission to undeclared segment
+    540	      04 FE 06 A1 04 41	83+  db	4, 0FEh, 6, 0A1h, 4, 41h, 83h, 0F9h, 11h
+    541	      F9 11
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 17
+main.asm
+
+
+
+**Error** main.asm(503)	Code or	data emission to undeclared segment
+    542	      74 0D 50 51 B4 86	B9+  db	74h, 0Dh, 50h, 51h, 0B4h, 86h, 0B9h, 1
+    543	      01
+**Error** main.asm(504)	Code or	data emission to undeclared segment
+    544	      00 CD 15 59 58 EB	D6+  db	0, 0CDh, 15h, 59h, 58h,	0EBh, 0D6h, 58h
+    545	      58
+**Error** main.asm(505)	Code or	data emission to undeclared segment
+    546	      88 36 A0 04 88 16	A1+  db	88h, 36h, 0A0h,	4, 88h,	16h, 0A1h, 4
+    547	      04
+**Error** main.asm(506)	Code or	data emission to undeclared segment
+    548	      E8 C4 FE 5A 59 5B	C3   db	0E8h, 0C4h, 0FEh, 5Ah, 59h, 5Bh, 0C3h
+**Error** main.asm(507)	Code or	data emission to undeclared segment
+    549
+    550
+    551
+    552	*000			     InputStr proc near
+    553	      52		     push    dx
+**Error** main.asm(512)	Code or	data emission to undeclared segment
+    554	      33 D2		     xor     dx, dx
+**Error** main.asm(513)	Code or	data emission to undeclared segment
+    555
+    556	*000			     loc_10515:
+    557	      B4 01		     mov     ah, 1
+**Error** main.asm(516)	Code or	data emission to undeclared segment
+    558	      CD 21		     int     21h	     ; DOS - KEYBOARD INPUT
+**Error** main.asm(517)	Code or	data emission to undeclared segment
+    559							     ; Return: AL = character read
+    560	      56		     push    si
+**Error** main.asm(519)	Code or	data emission to undeclared segment
+    561	      33 F6		     xor     si, si
+**Error** main.asm(520)	Code or	data emission to undeclared segment
+    562	      8B F3		     mov     si, bx
+**Error** main.asm(521)	Code or	data emission to undeclared segment
+    563	      03 F2		     add     si, dx
+**Error** main.asm(522)	Code or	data emission to undeclared segment
+    564	      88 04		     mov     [si], al
+**Error** main.asm(523)	Code or	data emission to undeclared segment
+    565	      5E		     pop     si
+**Error** main.asm(524)	Code or	data emission to undeclared segment
+    566	      3C 0D		     cmp     al, 0Dh
+**Error** main.asm(525)	Code or	data emission to undeclared segment
+    567	      74 FE		     jz	     short loc_1052A
+**Error** main.asm(526)	Undefined symbol: LOC_1052A
+    568	      42		     inc     dx
+**Error** main.asm(527)	Code or	data emission to undeclared segment
+    569	      EB FE		     jmp     short loc_10515
+**Error** main.asm(528)	Undefined symbol: LOC_10515
+    570
+    571	*000			     loc_1052A:
+    572	      53		     push    bx
+**Error** main.asm(531)	Code or	data emission to undeclared segment
+    573	      03 DA		     add     bx, dx
+**Error** main.asm(532)	Code or	data emission to undeclared segment
+    574	      C6 07 00		     mov     byte ptr [bx], 0
+**Error** main.asm(533)	Code or	data emission to undeclared segment
+    575	      5B		     pop     bx
+**Error** main.asm(534)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 18
+main.asm
+
+
+
+    576	      5A		     pop     dx
+**Error** main.asm(535)	Code or	data emission to undeclared segment
+    577	      C3		     retn
+**Error** main.asm(536)	Code or	data emission to undeclared segment
+    578	*000			     InputStr endp
+    579
+    580	      50		     push    ax
+**Error** main.asm(539)	Code or	data emission to undeclared segment
+    581	      53		     push    bx
+**Error** main.asm(540)	Code or	data emission to undeclared segment
+    582	      51		     push    cx
+**Error** main.asm(541)	Code or	data emission to undeclared segment
+    583	      52		     push    dx
+**Error** main.asm(542)	Code or	data emission to undeclared segment
+    584	      57		     push    di
+**Error** main.asm(543)	Code or	data emission to undeclared segment
+    585	      56		     push    si
+**Error** main.asm(544)	Code or	data emission to undeclared segment
+    586	      8B F8		     mov     di, ax
+**Error** main.asm(545)	Code or	data emission to undeclared segment
+    587	      E8 FFFD		     call    sub_102E8
+**Error** main.asm(546)	Undefined symbol: SUB_102E8
+    588	      8B F0		     mov     si, ax
+**Error** main.asm(547)	Code or	data emission to undeclared segment
+    589	      D0 E5		     shl     ch, 1
+**Error** main.asm(548)	Code or	data emission to undeclared segment
+    590	      33 D2		     xor     dx, dx
+**Error** main.asm(549)	Code or	data emission to undeclared segment
+    591	      8A D5		     mov     dl, ch
+**Error** main.asm(550)	Code or	data emission to undeclared segment
+    592	      8B DF		     mov     bx, di
+**Error** main.asm(551)	Code or	data emission to undeclared segment
+    593
+    594	*000			     loc_10548:
+    595	      51		     push    cx
+**Error** main.asm(554)	Code or	data emission to undeclared segment
+    596	      8B CE		     mov     cx, si
+**Error** main.asm(555)	Code or	data emission to undeclared segment
+    597	      E8 FFFD		     call    sub_101FB
+**Error** main.asm(556)	Undefined symbol: SUB_101FB
+    598	      59		     pop     cx
+**Error** main.asm(557)	Code or	data emission to undeclared segment
+    599	      FE C9		     dec     cl
+**Error** main.asm(558)	Code or	data emission to undeclared segment
+    600	      80 F9 00		     cmp     cl, 0
+**Error** main.asm(559)	Code or	data emission to undeclared segment
+    601	      74 FE		     jz	     short loc_1055E
+**Error** main.asm(560)	Undefined symbol: LOC_1055E
+    602	      81 C6 00A0	     add     si, 0A0h
+**Error** main.asm(561)	Code or	data emission to undeclared segment
+    603	      03 DA		     add     bx, dx
+**Error** main.asm(562)	Code or	data emission to undeclared segment
+    604	      EB FE		     jmp     short loc_10548
+**Error** main.asm(563)	Undefined symbol: LOC_10548
+    605
+    606	*000			     loc_1055E:
+    607	      5E		     pop     si
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 19
+main.asm
+
+
+
+**Error** main.asm(566)	Code or	data emission to undeclared segment
+    608	      5F		     pop     di
+**Error** main.asm(567)	Code or	data emission to undeclared segment
+    609	      5A		     pop     dx
+**Error** main.asm(568)	Code or	data emission to undeclared segment
+    610	      59		     pop     cx
+**Error** main.asm(569)	Code or	data emission to undeclared segment
+    611	      5B		     pop     bx
+**Error** main.asm(570)	Code or	data emission to undeclared segment
+    612	      58		     pop     ax
+**Error** main.asm(571)	Code or	data emission to undeclared segment
+    613	      C3		     retn
+**Error** main.asm(572)	Code or	data emission to undeclared segment
+    614	      50		     push    ax
+**Error** main.asm(573)	Code or	data emission to undeclared segment
+    615	      53		     push    bx
+**Error** main.asm(574)	Code or	data emission to undeclared segment
+    616	      51		     push    cx
+**Error** main.asm(575)	Code or	data emission to undeclared segment
+    617	      52		     push    dx
+**Error** main.asm(576)	Code or	data emission to undeclared segment
+    618	      57		     push    di
+**Error** main.asm(577)	Code or	data emission to undeclared segment
+    619	      56		     push    si
+**Error** main.asm(578)	Code or	data emission to undeclared segment
+    620	      1E		     push    ds
+**Error** main.asm(579)	Code or	data emission to undeclared segment
+    621	      06		     push    es
+**Error** main.asm(580)	Code or	data emission to undeclared segment
+    622	      8B F8		     mov     di, ax
+**Error** main.asm(581)	Code or	data emission to undeclared segment
+    623	      E8 FFFD		     call    sub_102E8
+**Error** main.asm(582)	Undefined symbol: SUB_102E8
+    624	      8B F0		     mov     si, ax
+**Error** main.asm(583)	Code or	data emission to undeclared segment
+    625	      D0 E5		     shl     ch, 1
+**Error** main.asm(584)	Code or	data emission to undeclared segment
+    626	      33 D2		     xor     dx, dx
+**Error** main.asm(585)	Code or	data emission to undeclared segment
+    627	      8A D5		     mov     dl, ch
+**Error** main.asm(586)	Code or	data emission to undeclared segment
+    628	      8B DE		     mov     bx, si
+**Error** main.asm(587)	Code or	data emission to undeclared segment
+    629	      06		     push    es
+**Error** main.asm(588)	Code or	data emission to undeclared segment
+    630	      1E		     push    ds
+**Error** main.asm(589)	Code or	data emission to undeclared segment
+    631	      07		     pop     es
+**Error** main.asm(590)	Code or	data emission to undeclared segment
+    632				     assume es:seg000
+**Error** main.asm(591)	Undefined symbol: SEG000
+    633	      1F		     pop     ds
+**Error** main.asm(592)	Code or	data emission to undeclared segment
+    634
+    635	*000			     loc_10580:
+    636	      51		     push    cx
+**Error** main.asm(595)	Code or	data emission to undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 20
+main.asm
+
+
+
+    637	      8B CF		     mov     cx, di
+**Error** main.asm(596)	Code or	data emission to undeclared segment
+    638	      E8 FFFD		     call    sub_101FB
+**Error** main.asm(597)	Undefined symbol: SUB_101FB
+    639	      59		     pop     cx
+**Error** main.asm(598)	Code or	data emission to undeclared segment
+    640	      FE C9		     dec     cl
+**Error** main.asm(599)	Code or	data emission to undeclared segment
+    641	      80 F9 00		     cmp     cl, 0
+**Error** main.asm(600)	Code or	data emission to undeclared segment
+    642	      74 FE		     jz	     short loc_10596
+**Error** main.asm(601)	Undefined symbol: LOC_10596
+    643	      03 FA		     add     di, dx
+**Error** main.asm(602)	Code or	data emission to undeclared segment
+    644	      81 C3 00A0	     add     bx, 0A0h
+**Error** main.asm(603)	Code or	data emission to undeclared segment
+    645	      EB FE		     jmp     short loc_10580
+**Error** main.asm(604)	Undefined symbol: LOC_10580
+    646
+    647	*000			     loc_10596:
+    648	      07		     pop     es
+**Error** main.asm(607)	Code or	data emission to undeclared segment
+    649				     assume es:nothing
+    650	      1F		     pop     ds
+**Error** main.asm(609)	Code or	data emission to undeclared segment
+    651	      5E		     pop     si
+**Error** main.asm(610)	Code or	data emission to undeclared segment
+    652	      5F		     pop     di
+**Error** main.asm(611)	Code or	data emission to undeclared segment
+    653	      5A		     pop     dx
+**Error** main.asm(612)	Code or	data emission to undeclared segment
+    654	      59		     pop     cx
+**Error** main.asm(613)	Code or	data emission to undeclared segment
+    655	      5B		     pop     bx
+**Error** main.asm(614)	Code or	data emission to undeclared segment
+    656	      58		     pop     ax
+**Error** main.asm(615)	Code or	data emission to undeclared segment
+    657	      C3		     retn
+**Error** main.asm(616)	Code or	data emission to undeclared segment
+    658
+    659
+    660
+    661	*000			     PrintStr proc near
+    662	      50		     push    ax
+**Error** main.asm(621)	Code or	data emission to undeclared segment
+    663	      B4 09		     mov     ah, 9
+**Error** main.asm(622)	Code or	data emission to undeclared segment
+    664	      CD 21		     int     21h	     ; DOS - PRINT STRING
+**Error** main.asm(623)	Code or	data emission to undeclared segment
+    665							     ; DS:DX ->	string terminated by "$"
+    666	      58		     pop     ax
+**Error** main.asm(625)	Code or	data emission to undeclared segment
+    667	      C3		     retn
+**Error** main.asm(626)	Code or	data emission to undeclared segment
+    668	*000			     PrintStr endp
+    669
+    670				     seg000 ends
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 21
+main.asm
+
+
+
+*Warning* main.asm(629)	Unmatched ENDS:	SEG000
+    671
+    672
+    673				     end start
+**Error** main.asm(632)	Undefined symbol: START
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 22
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/11/23"
+??FILENAME			  Text	 "main	  "
+??TIME				  Text	 "21:10:10"
+??VERSION			  Number 040A
+@32BIT				  Text	 0
+@CODE				  Text	 DGROUP
+@CODESIZE			  Text	 0
+@CPU				  Text	 0707H
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 MAIN
+@INTERFACE			  Text	 000H
+@MODEL				  Text	 1
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  0000 Word	  Public  DATA
+  _TEXT				  16  0000 Word	  Public  CODE
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 23
+Error Summary
+
+
+
+**Error** main.asm(24) Undefined symbol: START
+**Error** main.asm(26) Undefined symbol: START
+**Error** main.asm(27) Code or data emission to	undeclared segment
+**Error** main.asm(28) Code or data emission to	undeclared segment
+**Error** main.asm(29) Code or data emission to	undeclared segment
+**Error** main.asm(30) Code or data emission to	undeclared segment
+**Error** main.asm(31) Code or data emission to	undeclared segment
+**Error** main.asm(32) Code or data emission to	undeclared segment
+**Error** main.asm(33) Code or data emission to	undeclared segment
+**Error** main.asm(34) Code or data emission to	undeclared segment
+**Error** main.asm(35) Code or data emission to	undeclared segment
+**Error** main.asm(36) Code or data emission to	undeclared segment
+**Error** main.asm(39) Code or data emission to	undeclared segment
+**Error** main.asm(40) Code or data emission to	undeclared segment
+**Error** main.asm(42) Code or data emission to	undeclared segment
+**Error** main.asm(43) Undefined symbol: INPUTSTR
+**Error** main.asm(44) Code or data emission to	undeclared segment
+**Error** main.asm(45) Code or data emission to	undeclared segment
+**Error** main.asm(46) Undefined symbol: STRCMP
+**Error** main.asm(47) Code or data emission to	undeclared segment
+**Error** main.asm(48) Undefined symbol: CORRECTPWD
+**Error** main.asm(49) Undefined symbol: INCORRECTPWD
+**Error** main.asm(50) Code or data emission to	undeclared segment
+**Error** main.asm(53) Code or data emission to	undeclared segment
+**Error** main.asm(54) Undefined symbol: PRINTSTR
+**Error** main.asm(55) Undefined symbol: EXIT
+**Error** main.asm(56) Code or data emission to	undeclared segment
+**Error** main.asm(59) Code or data emission to	undeclared segment
+**Error** main.asm(60) Undefined symbol: PRINTSTR
+**Error** main.asm(63) Code or data emission to	undeclared segment
+**Error** main.asm(64) Code or data emission to	undeclared segment
+**Error** main.asm(65) Code or data emission to	undeclared segment
+**Error** main.asm(68) Code or data emission to	undeclared segment
+**Error** main.asm(69) Code or data emission to	undeclared segment
+**Error** main.asm(70) Code or data emission to	undeclared segment
+**Error** main.asm(71) Code or data emission to	undeclared segment
+**Error** main.asm(72) Code or data emission to	undeclared segment
+**Error** main.asm(73) Code or data emission to	undeclared segment
+**Error** main.asm(76) Code or data emission to	undeclared segment
+**Error** main.asm(77) Code or data emission to	undeclared segment
+**Error** main.asm(78) Code or data emission to	undeclared segment
+**Error** main.asm(79) Code or data emission to	undeclared segment
+**Error** main.asm(80) Code or data emission to	undeclared segment
+**Error** main.asm(81) Undefined symbol: LOC_101B3
+**Error** main.asm(82) Undefined symbol: LOC_101A5
+**Error** main.asm(85) Code or data emission to	undeclared segment
+**Error** main.asm(86) Code or data emission to	undeclared segment
+**Error** main.asm(87) Code or data emission to	undeclared segment
+**Error** main.asm(88) Code or data emission to	undeclared segment
+**Error** main.asm(89) Code or data emission to	undeclared segment
+**Error** main.asm(90) Code or data emission to	undeclared segment
+**Error** main.asm(91) Code or data emission to	undeclared segment
+**Error** main.asm(92) Undefined symbol: LOC_101CF
+**Error** main.asm(95) Code or data emission to	undeclared segment
+**Error** main.asm(96) Undefined symbol: LOC_101CB
+**Error** main.asm(97) Code or data emission to	undeclared segment
+**Error** main.asm(98) Code or data emission to	undeclared segment
+Turbo Assembler	 Version 4.1	    03/11/23 21:10:10	    Page 24
+Error Summary
+
+
+
+**Error** main.asm(99) Undefined symbol: LOC_101CF
+**Error** main.asm(100)	Undefined symbol: LOC_101C0
+**Error** main.asm(103)	Code or	data emission to undeclared segment
+**Error** main.asm(104)	Code or	data emission to undeclared segment
+**Error** main.asm(107)	Code or	data emission to undeclared segment
+**Error** main.asm(108)	Code or	data emission to undeclared segment
+**Error** main.asm(109)	Code or	data emission to undeclared segment
+**Error** main.asm(110)	Code or	data emission to undeclared segment
+**Error** main.asm(111)	Code or	data emission to undeclared segment
+**Error** main.asm(114)	Code or	data emission to undeclared segment
+**Error** main.asm(115)	Undefined symbol: LOC_101E2
+**Error** main.asm(116)	Code or	data emission to undeclared segment
+**Error** main.asm(117)	Undefined symbol: LOC_101E6
+**Error** main.asm(118)	Code or	data emission to undeclared segment
+**Error** main.asm(119)	Undefined symbol: LOC_101D6
+**Error** main.asm(122)	Code or	data emission to undeclared segment
+**Error** main.asm(123)	Code or	data emission to undeclared segment
+**Error** main.asm(126)	Code or	data emission to undeclared segment
+**Error** main.asm(127)	Code or	data emission to undeclared segment
+**Error** main.asm(128)	Code or	data emission to undeclared segment
+**Error** main.asm(129)	Code or	data emission to undeclared segment
+**Error** main.asm(130)	Code or	data emission to undeclared segment
+**Error** main.asm(131)	Undefined symbol: LOC_101F9
+**Error** main.asm(134)	Code or	data emission to undeclared segment
+**Error** main.asm(135)	Code or	data emission to undeclared segment
+**Error** main.asm(136)	Code or	data emission to undeclared segment
+**Error** main.asm(137)	Undefined symbol: LOC_101F9
+**Error** main.asm(138)	Undefined symbol: LOC_101F0
+**Error** main.asm(141)	Code or	data emission to undeclared segment
+**Error** main.asm(142)	Code or	data emission to undeclared segment
+**Error** main.asm(147)	Code or	data emission to undeclared segment
+**Error** main.asm(148)	Code or	data emission to undeclared segment
+**Error** main.asm(149)	Code or	data emission to undeclared segment
+**Error** main.asm(150)	Code or	data emission to undeclared segment
+**Error** main.asm(151)	Code or	data emission to undeclared segment
+**Error** main.asm(152)	Undefined symbol: LOC_10214
+**Error** main.asm(155)	Code or	data emission to undeclared segment
+**Error** main.asm(156)	Code or	data emission to undeclared segment
+**Error** main.asm(157)	Code or	data emission to undeclared segment
+**Error** main.asm(158)	Code or	data emission to undeclared segment
+**Error** main.asm(159)	Code or	data emission to undeclared segment
+**Error** main.asm(160)	Code or	data emission to undeclared segment
+**Error** main.asm(161)	Undefined symbol: LOC_10214
+**Error** main.asm(162)	Too many errors	or warnings
+
