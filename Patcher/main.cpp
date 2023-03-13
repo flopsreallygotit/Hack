@@ -2,6 +2,16 @@
 #include <SFML/Audio.hpp>
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/// @brief Patches com file.
+/// @param filename Name of file.
+void patch (const char *filename);
+
+/// @brief First byte we need to replace.
+size_t TargetPointer = 79;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -37,6 +47,8 @@ int main ()
     assert(music.openFromFile("music.ogg"));
     music.play();
 
+    patch("../Vlados/MAIN.COM");
+
     sf::Clock clock;
     sf::Sprite sprite;
     while (window.isOpen())
@@ -48,7 +60,6 @@ int main ()
 
         window.clear();
 
-        // if ((int) clock.getElapsedTime().asMilliseconds() % 200 > 100)
         if (rand() < RAND_MAX / 10)
             sprite = sprite2;
 
@@ -67,4 +78,34 @@ int main ()
     }
 
     return 0;
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+void patch (const char *filename)
+{
+    FILE *input = fopen(filename, "rb");
+    assert(input);
+
+    fseek(input, 0, SEEK_END);
+    size_t symbolsCount = (size_t) ftell(input);
+    rewind(input); 
+
+    char *buffer = (char *) calloc (symbolsCount + 1, sizeof(*buffer));
+    fread(buffer, symbolsCount, sizeof(*buffer), input);
+    fclose(input);
+
+    buffer[TargetPointer]     = 0xEB;
+    buffer[TargetPointer + 1] = 0x18;
+    buffer[TargetPointer + 2] = 0x90;
+
+    FILE *output = fopen("CRACK.COM", "wb");
+    assert(output);
+
+    fwrite(buffer, symbolsCount, sizeof(*buffer), output);
+    fclose(output);
+
+    free(buffer);
+
+    return;
 }
