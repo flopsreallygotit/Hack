@@ -96,7 +96,7 @@ void patch (const char *filename)
     fclose(input);
 
     buffer[TargetPointer]     = 0xEB;
-    buffer[TargetPointer + 1] = 0x18;
+    buffer[TargetPointer + 1] = 0x0F;
     buffer[TargetPointer + 2] = 0x90;
 
     FILE *output = fopen("CRACK.COM", "wb");
