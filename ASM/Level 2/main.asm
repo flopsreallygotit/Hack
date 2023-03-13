@@ -58,10 +58,7 @@ include macro.asm
 
 org 100h
 
-Start:      jmp @@Main
-            buffer db 20 dup(48d), 0
-
-@@Main:     xor bx, video
+Start:      xor bx, video
             mov es, bx
             xor bx, bx
 
@@ -88,6 +85,8 @@ Start:      jmp @@Main
 
 include string.asm
 include funcs.asm
+
+buffer db 20 dup(48d), 0
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
