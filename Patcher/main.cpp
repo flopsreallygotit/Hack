@@ -6,11 +6,13 @@
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-/// @brief Patches com file.
-/// @param filename Name of file.
+void makeText (sf::Font *font, sf::Text *text);
+
 void patch (const char *filename);
 
-/// @brief First byte we need to replace.
+void display (sf::RenderWindow *window, sf::Text *text, 
+              sf::Sprite *sprite1, sf::Sprite *sprite2);
+
 size_t TargetPointer = 79;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,13 +37,8 @@ int main ()
     sprite2.setTextureRect(sf::IntRect(0, 660, 1200, 675));
 
     sf::Font font;
-    font.loadFromFile("font.ttf");
-
     sf::Text text;
-    text.setFont(font);
-    text.setString("Patching...");
-    text.setCharacterSize(48);
-    text.setPosition(950, 550);
+    makeText(&font, &text);
 
     sf::Music music;
     assert(music.openFromFile("music.ogg"));
@@ -49,38 +46,24 @@ int main ()
 
     patch("../Vlados/MAIN.COM");
 
-    sf::Clock clock;
-    sf::Sprite sprite;
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-            if (event.type == sf::Event::Closed)
-                window.close();
-
-        window.clear();
-
-        if (rand() < RAND_MAX / 10)
-            sprite = sprite2;
-
-        else
-            sprite = sprite1;
-
-        window.draw(sprite);
-
-        if ((int) clock.getElapsedTime().asSeconds() % 2)
-        {
-            text.setFillColor(sf::Color::Red);
-            window.draw(text);
-        }
-
-        window.display();
-    }
+    display(&window, &text, &sprite1, &sprite2);
 
     return 0;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+void makeText (sf::Font *font, sf::Text *text)
+{
+    (*font).loadFromFile("font.ttf");
+    
+    (*text).setFont(*font);
+    (*text).setString("Patching...");
+    (*text).setCharacterSize(48);
+    (*text).setPosition(950, 550);   
+
+    return;
+}
 
 void patch (const char *filename)
 {
@@ -106,6 +89,41 @@ void patch (const char *filename)
     fclose(output);
 
     free(buffer);
+
+    return;
+}
+
+void display (sf::RenderWindow *window,  sf::Text *text, 
+              sf::Sprite *sprite1, sf::Sprite *sprite2)
+{
+    sf::Clock  clock;
+    sf::Sprite sprite;
+
+    while ((*window).isOpen())
+    {
+        sf::Event event;
+        while ((*window).pollEvent(event))
+            if (event.type == sf::Event::Closed)
+                (*window).close();
+
+        (*window).clear();
+
+        if (rand() < RAND_MAX / 10)
+            sprite = *sprite2;
+
+        else
+            sprite = *sprite1;
+
+        (*window).draw(sprite);
+
+        if ((int) clock.getElapsedTime().asSeconds() % 2)
+        {
+            (*text).setFillColor(sf::Color::Red);
+            (*window).draw(*text);
+        }
+
+        (*window).display();
+    }
 
     return;
 }

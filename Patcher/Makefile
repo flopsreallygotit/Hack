@@ -4,7 +4,7 @@ OBJ=main.o
 ODIR=obj
 IFLAGS=-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-%.o: %.c $(DEPS) sf::Music music;
+%.o: %.c $(DEPS)
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 main: $(OBJ)
